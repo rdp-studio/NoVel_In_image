@@ -1,8 +1,5 @@
 ## -*- coding: utf-8 -*-
 
-import sys
-sys.setdefaultencoding('utf8')
-
 from PIL import Image
 import math
 
