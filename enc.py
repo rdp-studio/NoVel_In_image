@@ -1,3 +1,9 @@
+## -*- coding: utf-8 -*-
+
+import sys
+reload(sys)
+sys.setdefaultencoding('utf8')
+
 from PIL import Image
 import math
 
@@ -18,7 +24,7 @@ def encode(text):
             x += 1
     return im
 
-def main(filename: str):
+def main(filename):
     with open(filename, encoding="utf-8") as f:
         all_text = f.read()
         
