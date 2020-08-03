@@ -1,7 +1,6 @@
 ## -*- coding: utf-8 -*-
 
 import sys
-reload(sys)
 sys.setdefaultencoding('utf8')
 
 from PIL import Image
@@ -23,7 +22,7 @@ def decode(im):
 
 def main(filename):
     all_text = decode(Image.open(filename))
-    with open("{}_decode.txt".format('.'.join(filename.split('.')[:-1])), "w") as f:
+    with open("{}_decode.txt".format('.'.join(filename.split('.')[:-1])), "w", encoding="utf-8") as f:
         f.write(all_text)
 
 if __name__ == '__main__':
