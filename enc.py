@@ -25,7 +25,7 @@ def encode(text):
     return im
 
 def main(filename):
-    with open(filename, encoding="utf-8") as f:
+    with open(filename) as f:
         all_text = f.read()
         
     im = encode(all_text)
