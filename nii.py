@@ -9,6 +9,7 @@ rds = ['-e', '-d']
 def layout_help():
     help_content = '''
     Novel_In_Image v0.2
+    By RDPStudio
 
     Usage: python {} [[-e|-d filename]|-h|-i]
 
