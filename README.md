@@ -9,10 +9,12 @@ NII是一个在文字和图片之间互相转换的便利工具。可以有效�
 ### 文字转图片：
 
 ```python
-python nii.py -e xxx.txt
+python nii.py -e xxx.txt 0
 ```
 
 其中`xxx.txt`是要转换的文本路径。
+
+其中`0`是设置生成的照片有多红。
 
 ### 图片转文字
 
