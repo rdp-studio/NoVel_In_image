@@ -22,8 +22,7 @@ def layout_help():
     return
 
 def install_dependencies():
-    os.system('pip install pillow')
-    os.system('pip3 install pillow')
+    print("This is build version , don't need install deps.")
     return
 
 def raise_err():
