@@ -8,21 +8,24 @@ rds = ['-e', '-d']
 
 def layout_help():
     help_content = '''
-    Novel_In_Image v0.2
+    Novel_In_Image v0.3
     By RDPStudio
 
-    Usage: python {} [[-e|-d filename]|-h|-i]
+    Usage: python {} [[-e|-d filename colortheme]|-h|-i]
 
     -e : Encode the file
     -d : Decode the file
     -h : View this help page
     -i : Install the dependencies
+    
+    filename:File Name.Example:good.txt
+    colortheme:Set the picture whats red.Example:0
     '''.format(sys.argv[0])
     print(help_content)
     return
 
 def install_dependencies():
-    print("This is build version , don't need install deps.")
+    print("Installed in the dist file.")
     return
 
 def raise_err():
@@ -39,9 +42,9 @@ if __name__ == '__main__':
         layout_help()
     elif len(args) == 2 and args[1] == '-i':
         install_dependencies()
-    elif len(args) == 3 and args[1] in rds:
+    elif len(args) == 4 and args[1] in rds:
         if args[1] == rds[0]:
-            enc.main(args[2])
+            enc.main(args[2], args[3])
         else:
             dec.main(args[2])
     else:
