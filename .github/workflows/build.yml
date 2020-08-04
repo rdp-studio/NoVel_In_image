@@ -46,7 +46,7 @@ jobs:
           if [[ "${TAG:5:4}" == "tags" ]]; then export TAG=${TAG:10}; else export TAG=${COMMIT_SHA}; fi
           cd dist
           mkdir upload
-          7z a upload/SuperPi@home-${LABEL}-${TAG}.zip nii.exe
+          7z a upload/nii-${LABEL}-${TAG}.zip nii.exe
           echo ::set-output name=binary_path::upload
           echo ::set-output name=artifact_name::nii-${LABEL}-${TAG}.zip
           echo ::set-output name=file_name::nii-${LABEL}-${TAG}.zip
